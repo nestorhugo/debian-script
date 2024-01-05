@@ -12,5 +12,5 @@ Você pode executar o script diretamente do GitHub sem precisar baixá-lo. Siga 
 2. Copie e cole o seguinte comando:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/branch/script_instalacao.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/nestorhugo/debian-script/main/debian-script.sh) && chmod +x debian-script.sh && ./debian-script.sh"
 ```
