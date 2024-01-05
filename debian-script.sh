@@ -94,6 +94,19 @@ else
     echo -e "${GREEN}O Docker já está instalado.${NC}"
 fi
 
+# Instala o Oh My Zsh
+echo "Instalando Oh My Zsh..."
+echo -e "\n" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Define o tema Agnoster
+echo "Configurando tema Agnoster..."
+sudo apt install fonts-powerline -y
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/' ~/.zshrc
+
+# Define o Zsh como shell padrão
+echo "Definindo Zsh como shell padrão..."
+chsh -s $(which zsh)
+
 # Configuração do Git
 echo -e "${YELLOW}Configurando o Git...${NC}"
 echo -n -e "${YELLOW}Digite seu nome de usuário do GitHub: ${NC}"
